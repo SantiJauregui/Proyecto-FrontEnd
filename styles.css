@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fcfcfc;
+}
+/* Contenedor principal de la barra */
+.encabezado {
+  display: flex;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #ffffff;
+  
+  gap: 35px; /* Espacio entre el escudo y el menú */
+}
+.escudo{
+    width: 80px ;
+    height: auto;
+    display: block;
+    
+}
+.nav-menu {
+  display: flex;
+  align-items: center;
+  
+  gap: 28px;          /* Separación uniforme entre cada texto */
+}
+.nav-item {
+  text-decoration: none;     /* Quita el subrayado típico de enlaces */
+  color: #111111;            /* Color negro elegante */
+  font-size: 14px;
+  font-weight: 600;          /* Grosor semi-negrita */
+  letter-spacing: 0.5px;     /* Ligero espaciado entre letras */
+  text-transform: uppercase; /* Convierte todo a mayúsculas */
+  cursor: pointer;           /* Manito al pasar por encima */
+  position: relative;
+  transition: color 0.2s ease;
+}
+.nav-item:hover {
+  color: #eb1923; /* Rojo institucional */
+}
+.auto-video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;     /* Clave: hace que cubra todo el contenedor sin deformarse */
+    display: block;
+}
+.videocaja{
+  position: relative;
+  width: 100%;
+  height: 80vh;          /* Ocupa el 80% del alto de la pantalla (puedes ajustarlo) */
+  overflow: hidden;      /* Corta cualquier sobrante del video */
+  background-color: #000; /* Fondo negro mientras carga */
+}
