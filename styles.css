@@ -57,3 +57,109 @@ body {
   overflow: hidden;      /* Corta cualquier sobrante del video */
   background-color: #000; /* Fondo negro mientras carga */
 }
+/* Contenedor principal de la sección de noticias */
+.noticias-section {
+  width: 100%;
+  max-width: 1400px;
+  margin: 40px auto;    /* Margen arriba/abajo para despegar del video */
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+/* Fila deslizable horizontal (carrusel) */
+.noticias-carrusel {
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;          /* Habilita la barra de scroll horizontal */
+  scroll-behavior: smooth;   /* Transición suave al deslizar */
+  padding-bottom: 25px;      /* Espacio para que respire la barra de scroll */
+}
+
+/* Personalización elegante de la barra de scroll */
+.noticias-carrusel::-webkit-scrollbar {
+  height: 6px;
+}
+.noticias-carrusel::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+.noticias-carrusel::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+.noticias-carrusel::-webkit-scrollbar-thumb:hover {
+  background: #eb1923; /* Se ilumina en rojo al interactuar */
+}
+
+/* Estilo individual de cada tarjeta */
+.tarjeta-noticia {
+  flex: 0 0 360px;           /* Ancho fijo para cada noticia */
+  height: 380px;            /* Altura de la tarjeta */
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Coloca el texto y botón al fondo */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Oscurecimiento con degradé para leer bien los títulos */
+.tarjeta-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 20%, rgba(0, 0, 0, 0.3) 60%, transparent 100%);
+  z-index: 1;
+}
+
+/* Texto y botón dentro de la tarjeta */
+.tarjeta-contenido {
+  position: relative;
+  z-index: 2;
+  padding: 24px;
+}
+
+.tarjeta-titulo {
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  line-height: 1.35;
+}
+
+/* Botones rojos estilo River */
+.btn-rojo {
+  background-color: #eb1923;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 18px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-rojo:hover {
+  background-color: #c7121b;
+}
+
+.btn-rojo:active {
+  transform: scale(0.97);
+}
+
+/* Barra inferior con botón secundario */
+.noticias-barra-inferior {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+
+
+.btn-ver-todas {
+  border-radius: 4px;
+  padding: 10px 20px;
+}
