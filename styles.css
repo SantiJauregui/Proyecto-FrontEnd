@@ -163,3 +163,115 @@ body {
   border-radius: 4px;
   padding: 10px 20px;
 }
+
+/* Contenedor general oscuro de la sección */
+.monumental-section {
+  background-color: #1a1a1a; /* Fondo gris oscuro característico */
+  padding: 60px 40px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Encabezado: Distribución título a la izquierda, botón a la derecha */
+.monumental-header {
+  max-width: 1400px;
+  margin: 0 auto 35px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Textos informativos */
+.monumental-titulos {
+  max-width: 750px;
+}
+
+.monumental-titulo-rojo {
+  color: #eb1923; /* Rojo River */
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.monumental-subtitulo {
+  color: #d1d1d1;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* Botón "CONOCER EXPERIENCIAS" */
+.btn-conocer-experiencias {
+  background-color: #eb1923;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 24px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  white-space: nowrap; /* Evita que el texto se corte en dos líneas */
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-conocer-experiencias:hover {
+  background-color: #c7121b;
+}
+
+.btn-conocer-experiencias:active {
+  transform: scale(0.98);
+}
+
+/* Fila de tarjetas con scroll horizontal suave (sin JavaScript) */
+.monumental-galeria {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;          /* Habilita el desplazamiento si son muchas fotos */
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 15px;      /* Espacio para la barra de scroll */
+}
+
+/* Tarjeta individual */
+.experiencia-card {
+  flex: 0 0 320px;           /* Ancho fijo para cada tarjeta */
+  height: 220px;            /* Altura de la tarjeta */
+  border-radius: 12px;      /* Bordes redondeados como en la imagen */
+  overflow: hidden;
+  scroll-snap-align: start;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.experiencia-card:hover {
+  transform: translateY(-4px); /* Sutil elevación al pasar el ratón */
+}
+
+/* Imagen que rellena la tarjeta */
+.experiencia-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* Ajuste perfecto sin deformar la foto */
+  display: block;
+}
+
+/* Barra de scroll personalizada acorde al modo oscuro */
+.monumental-galeria::-webkit-scrollbar {
+  height: 6px;
+}
+
+.monumental-galeria::-webkit-scrollbar-track {
+  background: #2a2a2a;
+  border-radius: 10px;
+}
+
+.monumental-galeria::-webkit-scrollbar-thumb {
+  background: #eb1923;      /* Color rojo */
+  border-radius: 10px;
+}
