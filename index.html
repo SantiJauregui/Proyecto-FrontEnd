@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <title>Club Atletico River Plate | El mas grande</title>
     
@@ -22,9 +23,9 @@
         <nav class="nav-menu">
             <a href="#" class="nav-item">SOCIOS</a>
             <a href="#" class="nav-item">ENTRADAS</a>
-            <a href="#" class="nav-item">TIENDA</a>
-            <a href="#" class="nav-item">MUSEO</a>
-            <a href="#" class="nav-item">ESTADIO MONUMENTAL</a>
+            <a href="#tienda" class="nav-item">TIENDA</a>
+            <a href="#monumental" class="nav-item">ESTADIO MONUMENTAL</a>
+            <a href="#contacto" class="nav-item">CONTACTO</a>
         </nav>
     </header>
     
@@ -35,119 +36,325 @@
 
                 </video>
         </section>
-        <!-- SECCIÓN DE NOTICIAS DEBAJO DEL VIDEO -->
-        <section class="noticias-section">
-  
-             <!-- Contenedor con scroll horizontal de las tarjetas -->
-            <div class="noticias-carrusel" id="carruselNoticias">
-    
-                <!-- Tarjeta 1 -->
-                <article class="tarjeta-noticia" style="background-image: url('tu-foto-partido.jpg');">
-                    <div class="tarjeta-overlay"></div>
-                    <div class="tarjeta-contenido">
-                        <h3 class="tarjeta-titulo">Venta de entradas - River vs. Estudiantes de Río Cuarto (Clausura 2026)</h3>
-                        <button type="button" class="btn-rojo">Leer más</button>
-                    </div>
-                </article>
 
-                <!-- Tarjeta 2 -->
-                <article class="tarjeta-noticia" style="background-image: url('tu-foto-monumental.jpg');">
-                    <div class="tarjeta-overlay"></div>
-                    <div class="tarjeta-contenido">
-                        <h3 class="tarjeta-titulo">Por Angelito y por este amor</h3>
-                        <button type="button" class="btn-rojo">Ver el video</button>
-                    </div>
-                </article>
 
-                <!-- Tarjeta 3 -->
-                <article class="tarjeta-noticia" style="background-image: url('tu-foto-rivercamp.jpg');">
-                    <div class="tarjeta-overlay"></div>
-                    <div class="tarjeta-contenido">
-                        <h3 class="tarjeta-titulo">Mañana de entrenamiento y fútbol en River Camp</h3>
-                        <button type="button" class="btn-rojo">Ver el video</button>
-                    </div>
-                </article>
-                <!-- Tarjeta 4 -->
-                <article class="tarjeta-noticia" style="background-image: url('tu-foto-partido.jpg');">
-                    <div class="tarjeta-overlay"></div>
-                    <div class="tarjeta-contenido">
-                        <h3 class="tarjeta-titulo">Venta de entradas - River vs. Estudiantes de Río Cuarto (Clausura 2026)</h3>
-                        <button type="button" class="btn-rojo">Leer más</button>
-                    </div>
-                </article>
-
-                <!-- Tarjeta 5 -->
-                <article class="tarjeta-noticia" style="background-image: url('tu-foto-monumental.jpg');">
-                    <div class="tarjeta-overlay"></div>
-                    <div class="tarjeta-contenido">
-                        <h3 class="tarjeta-titulo">Por Angelito y por este amor</h3>
-                        <button type="button" class="btn-rojo">Ver el video</button>
-                    </div>
-                </article>
-
-                <!-- Tarjeta 6 -->
-                <article class="tarjeta-noticia" style="background-image: url('tu-foto-rivercamp.jpg');">
-                    <div class="tarjeta-overlay"></div>
-                    <div class="tarjeta-contenido">
-                        <h3 class="tarjeta-titulo">Mañana de entrenamiento y fútbol en River Camp</h3>
-                        <button type="button" class="btn-rojo">Ver el video</button>
-                    </div>
-                </article>
-
-                
-            </div>
-
-            <!-- Barra inferior:  botón "Ver todas las noticias" -->
-            <div class="noticias-barra-inferior">
-                <!-- Botón secundario sin redirección -->
-                <button type="button" class="btn-rojo btn-ver-todas">Ver todas las noticias ↗</button>
-            </div>
-
-        </section>
+            
         <!-- SECCIÓN VIVÍ EL MONUMENTAL -->
-        <section class="monumental-section">
-  
+        <section class="monumental-section" id="monumental">
+
             <!-- Encabezado superior con textos a la izquierda y botón a la derecha -->
             <div class="monumental-header">
-            <div class="monumental-titulos">
-                <h2 class="monumental-titulo-rojo">VIVÍ EL MONUMENTAL COMO NUNCA ANTES</h2>
-                <p class="monumental-subtitulo">
+                <div class="monumental-titulos">
+                    <h2 class="monumental-titulo-rojo">VIVÍ EL MONUMENTAL COMO NUNCA ANTES</h2>
+                    <p class="monumental-subtitulo">
                     Recorré los rincones más emblemáticos del estadio y disfrutá experiencias únicas dentro de la casa de River
-                </p>
-            </div>
+                    </p>
+                </div>
 
-                <!-- Botón sin redirección -->
+                
                 <button type="button" class="btn-conocer-experiencias">
-                 CONOCER EXPERIENCIAS ↗
+                CONOCER EXPERIENCIAS ↗
                 </button>
             </div>
 
-            <!-- Galería / Carrusel de fotos con scroll -->
+            <!-- Galería -->
             <div class="monumental-galeria">
     
                 <!-- Imagen 1 -->
                 <div class="experiencia-card">
                     <img src="experiencia-1.jpg" alt="Tribuna Monumental" class="experiencia-img">
+                    <h4 class="experiencia-titulo">ENTRADAS Y<br>HOSPITALITY</h4>
                 </div>
 
                 <!-- Imagen 2 -->
                 <div class="experiencia-card">
                     <img src="experiencia-2.jpg" alt="Vista campo de juego" class="experiencia-img">
+                    <h4 class="experiencia-titulo">TOUR MONUMENTAL</h4>
                 </div>
 
                 <!-- Imagen 3 -->
                 <div class="experiencia-card">
                     <img src="experiencia-3.jpg" alt="Restaurante Banda" class="experiencia-img">
+                    <h4 class="experiencia-titulo">GASTRONOMIA</h4>
                 </div>
 
                 <!-- Imagen 4 -->
                 <div class="experiencia-card">
                     <img src="experiencia-4.jpg" alt="Convención o Eventos" class="experiencia-img">
+                    <h4 class="experiencia-titulo">EVENTOS<br>CORPORATIVOS</h4>
                 </div>
 
+            </div>
+            <div class="resenas-bloque">
+                <h3 class="resenas-titulo-seccion">EXPERIENCIAS DE NUESTROS VISITANTES</h3>
+
+                <div class="resenas-grid">
+
+                    <!-- Reseña 1: Restaurante Banda -->
+                    <article class="resena-card">
+                        <div class="resena-estrellas">★★★★★</div>
+                        <p class="resena-texto">
+                        "Almorzar en <strong>Banda Restaurante</strong> mirando directamente el campo de juego y las tribunas fue algo inolvidable. La gastronomía de primer nivel y la atención impecable."
+                        </p>
+                        <div class="resena-usuario">
+                            <span class="resena-nombre">Lucas Gómez</span>
+                            <span class="resena-servicio">Recomendó: Restaurante Banda</span>
+                        </div>
+                    </article>
+
+                    <!-- Reseña 2: Tour Monumental y Vestuarios -->
+                    <article class="resena-card">
+                        <div class="resena-estrellas">★★★★★</div>
+                        <p class="resena-texto">
+                        "Hicimos el <strong>River Tour con acceso a vestuarios</strong> y salida por el túnel hacia el césped. Se te pone la piel de gallina al pisar la cancha. Super recomendable para hacer en familia."
+                        </p>
+                        <div class="resena-usuario">
+                            <span class="resena-nombre">Mariana Rossi</span>
+                            <span class="resena-servicio">Recomendó: Estadio Tour & Vestuarios</span>
+                        </div>
+                    </article>
+
+                    <!-- Reseña 3: Museo River -->
+                    <article class="resena-card">
+                        <div class="resena-estrellas">★★★★★</div>
+                        <p class="resena-texto">
+                        "La visita al <strong>Museo River</strong> superó mis expectativas. La sala de trofeos y la tecnología de las proyecciones te hacen revivir toda la gloria del club en detalle."
+                        </p>
+                        <div class="resena-usuario">
+                            <span class="resena-nombre">Ignacio Fernández</span>
+                            <span class="resena-servicio">Recomendó: Museo River Plate</span>
+                        </div>
+                    </article>
+
+                    <!-- Reseña 4: Hospitality & Palcos -->
+                    <article class="resena-card">
+                        <div class="resena-estrellas">★★★★★</div>
+                        <p class="resena-texto">
+                        "Vivimos el partido desde la <strong>Experiencia Hospitality en Palcos</strong>. La comodidad, el catering antes del partido y la vista panorámica son insuperables. Vale cada centavo."
+                        </p>
+                        <div class="resena-usuario">
+                            <span class="resena-nombre">Camila Benítez</span>
+                            <span class="resena-servicio">Recomendó: Palcos & Hospitality</span>
+                        </div>
+                    </article>
                 </div>
+            </div>
+        </section>
+        <!-- SECCIÓN TIENDA OFICIAL CON CARRITO -->
+        <section class="tienda-section" id="tienda">
+        
+            <div class="tienda-layout">
+            
+                <!-- ÁREA DE PRODUCTOS (3/4 de la pantalla: Grilla 3x3) -->
+                <div class="productos-grid">
+
+                    <!-- Producto 1 -->
+                    <article class="producto-card">
+                        <div class="producto-img-box">
+                            <img src="camiseta-alter.jpg" alt="Camiseta Alternativa" class="producto-img">
+                        </div>
+                        <div class="producto-info">
+                            <span class="producto-categoria">Hombre Fútbol</span>
+                            <h3 class="producto-nombre">CAMISETA ALTERNATIVA RIVER PLATE 26/27</h3>
+                            <p class="precio-principal">$ 149.999</p>
+                            <button type="button" class="btn-agregar">Agregar al carrito</button>
+                        </div>
+                    </article>
+
+                    <!-- Producto 2 -->
+                    <article class="producto-card">
+                        <div class="producto-img-box">
+                            <img src="camisetatitu.jpg" alt="Camiseta Titular" class="producto-img">
+                        </div>
+                        <div class="producto-info">
+                            <span class="producto-categoria">Hombre Fútbol</span>
+                            <h3 class="producto-nombre">CAMISETA TITULAR RIVER PLATE 26/27</h3>
+                            <p class="precio-principal">$ 149.999</p>
+                            <button type="button" class="btn-agregar">Agregar al carrito</button>
+                        </div>
+                    </article>
+
+                    <!-- Producto 3 -->
+                    <article class="producto-card">
+                        <div class="producto-img-box">
+                            <img src="short-titular.jpg" alt="Shorts Titular" class="producto-img">
+                        </div>
+                        <div class="producto-info">
+                            <span class="producto-categoria">Hombre Fútbol</span>
+                            <h3 class="producto-nombre">SHORTS TITULAR RIVER PLATE 26/27 </h3>
+                            <p class="precio-principal">$ 79.999</p>
+                            <button type="button" class="btn-agregar">Agregar al carrito</button>
+                        </div>
+                    </article>
+
+                    <!-- Producto 4 -->
+                    <article class="producto-card">
+                        <div class="producto-img-box">
+                            <img src="camiseta-pre.jpg" alt="Camiseta Prepartido" class="producto-img">
+                        </div>
+                        <div class="producto-info">
+                            <span class="producto-categoria">Hombre Fútbol</span>
+                            <h3 class="producto-nombre">CAMISETA PREPARTIDO RIVER PLATE 26/27</h3>
+                            <p class="precio-principal">$ 89.999</p>
+                            <button type="button" class="btn-agregar">Agregar al carrito</button>
+                        </div>
+                    </article>
+
+                    <!-- Producto 5 -->
+                    <article class="producto-card">
+                        <div class="producto-img-box">
+                            <img src="camiseta-entre.jpg" alt="Camiseta de Entrenamiento" class="producto-img">
+                        </div>
+                        <div class="producto-info">
+                            <span class="producto-categoria">Hombre Fútbol</span>
+                            <h3 class="producto-nombre">CAMISETA DE ENTRENAMIENTO RIVER PLATE 26/27</h3>
+                            <p class="precio-principal">$ 89.999</p>
+                            <button type="button" class="btn-agregar">Agregar al carrito</button>
+                        </div>
+                    </article>
+
+                    <!-- Producto 6 -->
+                    <article class="producto-card">
+                        <div class="producto-img-box">
+                            <img src="campera.jpg" alt="Campera Roja" class="producto-img">
+                        </div>
+                        <div class="producto-info">
+                            <span class="producto-categoria">Hombre Fútbol</span>
+                            <h3 class="producto-nombre">CAMPERA RIVER PLATE 26/27</h3>
+                            <p class="precio-principal">$ 149.999</p>
+                            <button type="button" class="btn-agregar">Agregar al carrito</button>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- ÁREA DE CARRITO (1/4 de la pantalla) -->
+                <aside class="carrito-panel">
+                    <div class="carrito-header">
+                        <h3>Tu Carrito</h3>
+                
+                    </div>
+
+
+                    <!-- Resumen final y botón Comprar -->
+                    <div class="carrito-footer">
+                        <div class="carrito-subtotal">
+                            <span>Total:</span>
+                            <strong>$ 0,00</strong>
+                        </div>
+                        <button type="button" class="btn-comprar">COMPRAR AHORA</button>
+                    </div>
+                </aside>
+            </div>
 
         </section>
+        <!-- SECCIÓN DE CONTACTO Y UBICACIÓN -->
+        <section class="contacto-section" id="contacto">
+        <div class="contacto-container">
+
+            <!-- COLUMNA IZQUIERDA: FORMULARIO DE MENSAJE -->
+            <div class="contacto-formulario-col">
+            <h2 class="contacto-titulo">Escribinos</h2>
+            
+            <form class="formulario-contacto" >
+                <div class="campo-grupo">
+                <input type="text" placeholder="Nombre" class="input-contacto" required>
+                </div>
+
+                <div class="campo-grupo">
+                <input type="email" placeholder="Email" class="input-contacto" required>
+                </div>
+
+                <div class="campo-grupo">
+                <input type="tel" placeholder="Teléfono" class="input-contacto">
+                </div>
+
+                <div class="campo-grupo">
+                <textarea placeholder="Mensaje" rows="5" class="input-contacto textarea-contacto" required></textarea>
+                </div>
+
+                <!-- Botón de enviar estilo River (sin redirección) -->
+                <button type="submit" class="btn-enviar-contacto">
+                Enviar mensaje
+                </button>
+            </form>
+            </div>
+
+            <!-- COLUMNA DERECHA: INFORMACIÓN OFICIAL Y MAPA MONUMENTAL -->
+            <div class="contacto-info-col">
+            <h2 class="contacto-titulo">Visitanos</h2>
+
+            <div class="info-detalles">
+                <!-- Dirección oficial -->
+                <p class="info-item">
+                <span class="info-icono">📍</span>
+                <span>Av. Figueroa Alcorta 7597 (C1424BCL), CABA, Buenos Aires, Argentina</span>
+                </p>
+
+                <!-- WhatsApp Informes -->
+                <p class="info-item">
+                <span class="info-icono">📞</span>
+                <span>Informes: <strong>(54 9 11) 3569-1218</strong></span>
+                </p>
+
+                <!-- Email oficial -->
+                <p class="info-item">
+                <span class="info-icono">✉️</span>
+                <span>club@cariverplate.com.ar</span>
+                </p>
+            </div>
+
+            <!-- Mapa interactivo de Google Maps embebido centrado en el Estadio Monumental -->
+            <div class="mapa-contenedor">
+                <iframe 
+                title="Ubicación Estadio Monumental River Plate"
+                src="https://maps.google.com/maps?q=Estadio%20Monumental%20River%20Plate,%20Av.%20Figueroa%20Alcorta%207597,%20Buenos%20Aires&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                allowfullscreen="" 
+                loading="lazy">
+                </iframe>
+            </div>
+            </div>
+
+        </div>
+        </section>        
     </main>
+    <!-- PIE DE PÁGINA INSTITUCIONAL RIVER PLATE -->
+    <footer class="footer-river">
+    <div class="footer-container">
+        
+        <!-- PARTE SUPERIOR ( Escudo + Redes Sociales) -->
+        <div class="footer-superior">
+        
+        
+
+        <!-- Bloque de Redes Sociales -->
+        <div class="footer-redes">
+            <span class="redes-texto">SEGUINOS EN:</span>
+            <div class="redes-iconos">
+                <a href="#" class="red-icon" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" class="red-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="red-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="red-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" class="red-icon" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            
+            </div>
+        </div>
+
+        </div>
+
+        <!-- LÍNEA SEPARADORA BLANCA -->
+        <hr class="footer-divisor">
+
+        <!-- PARTE INFERIOR (Segunda imagen: Texto legal, dirección y contacto) -->
+        <div class="footer-inferior">
+        <p class="footer-copyright">
+            Club Atlético River Plate, Asoc. Civil &copy; 2026 Todos los derechos reservados. Av. Figueroa Alcorta 7597 (C1424BCL)
+        </p>
+        <p class="footer-contacto">
+            CABA, Buenos Aires, Argentina. Contacto: Informes: &#x1F4AC; (54 9 11) 3569-1218 &bull; <span class="footer-email">club@cariverplate.com.ar</span>
+        </p>
+        </div>
+
+    </div>
+    </footer>    
 </body>
 </html>

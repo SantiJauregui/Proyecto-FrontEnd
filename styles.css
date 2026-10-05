@@ -7,14 +7,14 @@
 }
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: #fcfcfc;
+  background-color: white;
 }
 /* Contenedor principal de la barra */
 .encabezado {
   display: flex;
   align-items: center;
   padding: 15px 40px;
-  background-color: #ffffff;
+  background-color: white;
   
   gap: 35px; /* Espacio entre el escudo y el menú */
 }
@@ -57,112 +57,7 @@ body {
   overflow: hidden;      /* Corta cualquier sobrante del video */
   background-color: #000; /* Fondo negro mientras carga */
 }
-/* Contenedor principal de la sección de noticias */
-.noticias-section {
-  width: 100%;
-  max-width: 1400px;
-  margin: 40px auto;    /* Margen arriba/abajo para despegar del video */
-  padding: 0 40px;
-  box-sizing: border-box;
-}
 
-/* Fila deslizable horizontal (carrusel) */
-.noticias-carrusel {
-  display: flex;
-  gap: 25px;
-  overflow-x: auto;          /* Habilita la barra de scroll horizontal */
-  scroll-behavior: smooth;   /* Transición suave al deslizar */
-  padding-bottom: 25px;      /* Espacio para que respire la barra de scroll */
-}
-
-/* Personalización elegante de la barra de scroll */
-.noticias-carrusel::-webkit-scrollbar {
-  height: 6px;
-}
-.noticias-carrusel::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 10px;
-}
-.noticias-carrusel::-webkit-scrollbar-thumb {
-  background: #ccc;
-  border-radius: 10px;
-}
-.noticias-carrusel::-webkit-scrollbar-thumb:hover {
-  background: #eb1923; /* Se ilumina en rojo al interactuar */
-}
-
-/* Estilo individual de cada tarjeta */
-.tarjeta-noticia {
-  flex: 0 0 360px;           /* Ancho fijo para cada noticia */
-  height: 380px;            /* Altura de la tarjeta */
-  border-radius: 12px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end; /* Coloca el texto y botón al fondo */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-/* Oscurecimiento con degradé para leer bien los títulos */
-.tarjeta-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 20%, rgba(0, 0, 0, 0.3) 60%, transparent 100%);
-  z-index: 1;
-}
-
-/* Texto y botón dentro de la tarjeta */
-.tarjeta-contenido {
-  position: relative;
-  z-index: 2;
-  padding: 24px;
-}
-
-.tarjeta-titulo {
-  color: #ffffff;
-  font-size: 17px;
-  font-weight: 700;
-  margin-bottom: 18px;
-  line-height: 1.35;
-}
-
-/* Botones rojos estilo River */
-.btn-rojo {
-  background-color: #eb1923;
-  color: #ffffff;
-  border: none;
-  border-radius: 4px;
-  padding: 10px 18px;
-  font-size: 13px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.1s ease;
-}
-
-.btn-rojo:hover {
-  background-color: #c7121b;
-}
-
-.btn-rojo:active {
-  transform: scale(0.97);
-}
-
-/* Barra inferior con botón secundario */
-.noticias-barra-inferior {
-  display: flex;
-  align-items: center;
-  margin-top: 15px;
-}
-
-
-
-.btn-ver-todas {
-  border-radius: 4px;
-  padding: 10px 20px;
-}
 
 /* Contenedor general oscuro de la sección */
 .monumental-section {
@@ -172,7 +67,7 @@ body {
   box-sizing: border-box;
 }
 
-/* Encabezado: Distribución título a la izquierda, botón a la derecha */
+
 .monumental-header {
   max-width: 1400px;
   margin: 0 auto 35px auto;
@@ -188,7 +83,7 @@ body {
 }
 
 .monumental-titulo-rojo {
-  color: #eb1923; /* Rojo River */
+  color: #eb1923; 
   font-size: 32px;
   font-weight: 800;
   letter-spacing: 0.5px;
@@ -202,10 +97,9 @@ body {
   line-height: 1.5;
 }
 
-/* Botón "CONOCER EXPERIENCIAS" */
 .btn-conocer-experiencias {
   background-color: #eb1923;
-  color: #ffffff;
+  color: white;
   border: none;
   border-radius: 4px;
   padding: 12px 24px;
@@ -219,59 +113,552 @@ body {
 }
 
 .btn-conocer-experiencias:hover {
-  background-color: #c7121b;
+  background-color: #eb1923;
 }
 
 .btn-conocer-experiencias:active {
   transform: scale(0.98);
 }
 
-/* Fila de tarjetas con scroll horizontal suave (sin JavaScript) */
+/* Fila de tarjetas D */
 .monumental-galeria {
   max-width: 1400px;
   margin: 0 auto;
   display: flex;
   gap: 20px;
-  overflow-x: auto;          /* Habilita el desplazamiento si son muchas fotos */
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
-  padding-bottom: 15px;      /* Espacio para la barra de scroll */
+
+  padding-bottom: 15px;    
 }
 
 /* Tarjeta individual */
 .experiencia-card {
-  flex: 0 0 320px;           /* Ancho fijo para cada tarjeta */
-  height: 220px;            /* Altura de la tarjeta */
-  border-radius: 12px;      /* Bordes redondeados como en la imagen */
+  flex: 0 0 280px;           
+  height: 380px;            
+  border-radius: 10px;      
   overflow: hidden;
-  scroll-snap-align: start;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease;
+  position: relative;
+  cursor: pointer;
 }
-
-.experiencia-card:hover {
-  transform: translateY(-4px); /* Sutil elevación al pasar el ratón */
-}
-
-/* Imagen que rellena la tarjeta */
 .experiencia-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;        /* Ajuste perfecto sin deformar la foto */
+  object-fit: cover;      
   display: block;
 }
+/* Tipografía en mayúsculas, negrita y alineada abajo a la izquierda */
+.experiencia-titulo {
+  position: absolute; /* Hace que flote sobre la imagen */
+  bottom: 0;          /* Lo ubica pegado abajo */
+  left: 0;
+  width: 100%;       
+  box-sizing: border-box;
+  z-index: 2;
+  color: #ffffff;
+  font-family: 'Roboto', 'Open Sans', sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 40px 18px 20px 18px;
+  margin: 0;
 
-/* Barra de scroll personalizada acorde al modo oscuro */
-.monumental-galeria::-webkit-scrollbar {
-  height: 6px;
+  /* Degradé negro para que el blanco sea legible sobre cualquier foto */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.5) 60%, transparent 100%);
+}
+/* Contenedor general de las reseñas dentro de la sección */
+.resenas-bloque {
+  max-width: 1400px;
+  margin: 50px auto 0 auto; 
+  padding-top: 30px;
+  border-top: 1px solid #2e2e2e;  
 }
 
-.monumental-galeria::-webkit-scrollbar-track {
-  background: #2a2a2a;
-  border-radius: 10px;
+/* Título de la sección de reseñas */
+.resenas-titulo-seccion {
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
 }
 
-.monumental-galeria::-webkit-scrollbar-thumb {
-  background: #eb1923;      /* Color rojo */
+/* Grilla con las 4 tarjetas  */
+.resenas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* Tarjeta individual de reseña */
+.resena-card {
+  background-color: #242424; 
   border-radius: 10px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #333333;
+  transition: border-color 0.2s ease;
+}
+
+.resena-card:hover {
+  
+  border-color: #eb1923; /* Detalle rojo al pasar el cursor */
+}
+
+/* Estrellitas en rojo River */
+.resena-estrellas {
+  color: #eb1923;
+  font-size: 16px;
+  margin-bottom: 12px;
+  letter-spacing: 2px;
+}
+
+/* Comentario del usuario */
+.resena-texto {
+  color: #cfcfcf;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+.resena-texto strong {
+  color: white;
+}
+
+/* Datos del autor y servicio */
+.resena-usuario {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-top: 1px solid #353535;
+  padding-top: 12px;
+}
+
+.resena-nombre {
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.resena-servicio {
+  color: #eb1923; /* Servicio destacado en rojo */
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+
+/* Sección contenedora */
+.tienda-section {
+  width: 100%;
+  max-width: 1550px;
+  margin: 40px auto;
+  padding: 0 25px;
+  box-sizing: border-box;
+}
+
+/* División de la pantalla: 3/4 Productos (75%) y 1/4 Carrito (25%) */
+.tienda-layout {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+/* Grilla de productos: 3 columnas x 3 filas */
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Tarjeta de producto */
+.producto-card {
+  background-color: white;
+  border: 1px solid #8b8b8b;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+
+
+/* Contenedor y ajuste de imagen */
+.producto-img-box {
+  width: 100%;
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.producto-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Textos de la tarjeta */
+.producto-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.producto-categoria {
+  font-size: 11px;
+  color: #7d7d7d;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.producto-nombre {
+  font-size: 13px;
+  font-weight: 700;
+  color: #111111;
+  line-height: 1.35;
+  margin-bottom: 10px;
+  min-height: 36px; /* Mantiene la misma altura en los nombres de 2 líneas */
+}
+
+.precio-principal {
+  font-size: 15px;
+  font-weight: 800;
+  color: #111111;
+  margin-bottom: 2px;
+}
+
+
+
+/* Botón individual "Agregar al carrito" */
+.btn-agregar {
+  width: 100%;
+  background-color: #ffffff;
+  color: #eb1923;
+  border: 1.5px solid #eb1923;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-agregar:hover {
+  background-color: #eb1923;
+  color: #ffffff;
+}
+
+.btn-agregar:active {
+  transform: scale(0.98);
+}
+
+
+/* PANEL DEL CARRITO (1/4 de la pantalla)     */
+
+.carrito-panel {
+  background-color: #ffffff;
+  border: 1px solid #8b8b8b;
+  border-radius: 12px;
+  padding: 24px;
+  
+  top: 20px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+}
+
+.carrito-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ededed;
+}
+
+.carrito-header h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #111111;
+}
+
+.carrito-cant {
+  font-size: 12px;
+  font-weight: 600;
+  color: #777777;
+  background-color: #f1f1f1;
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+
+/* Pie del carrito con botón comprar */
+.carrito-footer {
+  border-top: 1px solid #8b8b8b;
+  padding-top: 18px;
+}
+
+.carrito-subtotal {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 16px;
+  color: #333333;
+}
+
+.carrito-subtotal strong {
+  font-size: 16px;
+  color: #111111;
+}
+
+/* Botón principal de Comprar */
+.btn-comprar {
+  width: 100%;
+  background-color: #eb1923;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 14px;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-comprar:hover {
+  background-color: #c7121b;
+}
+
+.btn-comprar:active {
+  transform: scale(0.98);
+}
+/* Contenedor principal de la sección de contacto */
+.contacto-section {
+  width: 100%;
+  background-color: #f9f9f9;
+  padding: 60px 40px;
+  box-sizing: border-box;
+}
+
+/* Grilla a dos columnas: Formulario e Información */
+.contacto-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* Títulos de ambas columnas */
+.contacto-titulo {
+  font-size: 24px;
+  font-weight: 800;
+  color: #111111;
+  margin-bottom: 24px;
+  letter-spacing: 0.5px;
+}
+
+/* --- Formulario --- */
+.formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.campo-grupo {
+  width: 100%;
+}
+
+.input-contacto {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1.5px solid #dcdcdc;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  color: #222222;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-contacto:focus {
+  border-color: #eb1923;
+  box-shadow: 0 0 0 3px rgba(235, 25, 35, 0.1);
+}
+
+.textarea-contacto {
+  resize: vertical;
+  min-height: 120px;
+}
+
+
+.btn-enviar-contacto {
+  align-self: flex-start;
+  background-color: #eb1923;
+  color: #ffffff;
+  border: none;
+  border-radius: 25px; 
+  padding: 12px 34px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  margin-top: 6px;
+}
+
+.btn-enviar-contacto:hover {
+  background-color: #c7121b;
+}
+
+.btn-enviar-contacto:active {
+  transform: scale(0.97);
+}
+
+/* --- Información de Contacto --- */
+.info-detalles {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: #444444;
+  line-height: 1.4;
+}
+
+.info-icono {
+  font-size: 16px;
+}
+
+/* --- Contenedor del Mapa --- */
+.mapa-contenedor {
+  width: 100%;
+  height: 250px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.mapa-contenedor iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Adaptabilidad a dispositivos móviles */
+@media (max-width: 768px) {
+  .contacto-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+/* Contenedor general del pie de página */
+.footer-river {
+  width: 100%;
+  background-color: #eb1923; /* Rojo oficial River Plate */
+  color: #ffffff;
+  padding: 30px 40px 20px 40px;
+  box-sizing: border-box;
+}
+
+.footer-container {
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+/* --- SECCIÓN SUPERIOR --- */
+.footer-superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 25px;
+}
+
+/* Bloque central de redes sociales */
+.footer-redes {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 0 auto; /* Centra el bloque de redes horizontalmente */
+  
+}
+
+.redes-texto {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+}
+
+.redes-iconos {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Iconos vectoriales de redes */
+.red-icon {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+
+
+/* --- LÍNEA DIVISORIA --- */
+.footer-divisor {
+  border: 0;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.7); /* Línea blanca fina */
+  margin: 0 0 20px 0;
+}
+
+/* --- SECCIÓN INFERIOR (Texto legal y de contacto) --- */
+.footer-inferior {
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+.footer-copyright {
+  margin-bottom: 4px;
+  font-weight: 400;
+}
+
+.footer-contacto {
+  font-weight: 400;
+}
+
+.footer-email {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Responsive para celulares */
+@media (max-width: 768px) {
+  .footer-superior {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-redes {
+    transform: none;
+    flex-direction: column;
+    gap: 12px;
+  }
 }
